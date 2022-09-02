@@ -6,7 +6,29 @@ import Footer from "./components/Footer";
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import  {addBets} from './store/betsSlice';
+import { useGetBetsQuery } from './api/betsapi';
+
 function App() {
+//@ts-ignore
+// const bets = useSelector(state => state.bets.value)
+// const dispatch = useDispatch()
+
+
+// fetch("https://api.project44.mayflower.tech/bet")
+// .then(data => data.json())
+// .then(data => {
+//   console.log(data)
+//   dispatch(addBets(data))
+//   // console.log(bets)
+// }
+//  );
+
+const { data, error, isLoading } = useGetBetsQuery()
+
+console.log(data);
 
   return (
     <div className="App">

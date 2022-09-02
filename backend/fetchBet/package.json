@@ -1,0 +1,26 @@
+{
+  "name": "fetchbet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.102",
+    "@types/node": "^18.7.14",
+    "@types/uuid": "^8.3.4",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1208.0",
+    "esbuild": "^0.15.6",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "dev": "esbuild --watch --bundle --sourcemap=inline --platform=node --target=node16 --outdir=build index.ts",
+    "build": "esbuild --drop:debugger --drop:console --tree-shaking=true --bundle --minify --platform=node --target=node16 --outdir=build index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+ 
+  }
+}

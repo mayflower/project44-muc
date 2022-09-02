@@ -13,4 +13,3 @@ export interface Bet {
     minimumWager: number;
     competitors: Array<User>;
 }
-

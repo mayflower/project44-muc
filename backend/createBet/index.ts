@@ -31,3 +31,4 @@ const handler: APIGatewayProxyHandler = async (event, context, callback) => {
 };
 
 module.exports.handler = handler;
+

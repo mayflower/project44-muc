@@ -35,4 +35,4 @@ build: build-fetchBets build-fetchBet build-updateBet build-createBet
 logs:
 	docker logs localstack
 list-bets:
-	awslocal dynamodb scan --table-name Bets
+	AWS_DEFAULT_REGION=us-east-1 awslocal dynamodb scan --table-name Bets

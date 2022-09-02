@@ -94,9 +94,9 @@ Resources:
   updateBet:
     Type: "AWS::Serverless::Function"
     Properties:
-      Runtime: nodejs16.x
-      Handler: index.handler
-      CodeUri: ./updateBet/build
+      Runtime: python3.8
+      Handler: app.lambda_handler
+      CodeUri: ./update-bets/update-bets
       MemorySize: 128
       Timeout: 300
       Description: 'Lambda to update bet'
@@ -106,7 +106,7 @@ Resources:
           TABLENAME: !Ref TABLENAME
           LOCAL: !Ref LOCAL
       Events:
-        createBet:
+        updateBet:
           Type: Api
           Properties:
             Path: /bet/{betId}

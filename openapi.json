@@ -377,7 +377,7 @@
         "tags": ["bet"]
       },
       "put": {
-        "operationId": "updateBet",
+        "operationId": " Bet",
         "parameters": [
           {
             "$ref": "#/components/parameters/betId"
